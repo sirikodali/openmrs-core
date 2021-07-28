@@ -4,11 +4,11 @@ node('GOL')
         git 'https://github.com/sirikodali/openmrs-core.git'
     }
     stage('BUILD'){
-        sh 'mvn clean package'
+        sh 'mvn package'
 
     }
     stage('Post'){
-        junit '**/*.war'
-        archive '**/TEST-*xml'
+        archive '**/*.war'
+        junit '**/TEST-*xml'
     }
 }
