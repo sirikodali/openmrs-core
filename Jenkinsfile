@@ -1,4 +1,4 @@
-node('GOL')
+node('MASTER')
 {
     stage('SCM'){
         git 'https://github.com/sirikodali/openmrs-core.git'
